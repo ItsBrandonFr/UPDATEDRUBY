@@ -196,4 +196,7 @@ MonoBehaviour:
   speed: 1
   vertical: 0
   changeTime: 3
+  countText: {fileID: 0}
+  winTextObject: {fileID: 0}
   smokeEffect: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 8bac38999e8e58645816808946cde2a3, type: 3}

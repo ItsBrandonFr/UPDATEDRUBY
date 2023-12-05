@@ -30,7 +30,7 @@ public static bool gameOver = false; //gameover
     public AudioClip hitSound;
     
     public int health { get { return currentHealth; }}
-    int currentHealth;
+    public int currentHealth;
     
     public float timeInvincible = 2.0f;
     bool isInvincible;
@@ -120,6 +120,7 @@ public static bool gameOver = false; //gameover
 
     public void ChangeHealth(int amount)
     {
+        Debug.LogError("rubys current health "+ currentHealth);
         if (amount < 0)
         {
             if (isInvincible)
@@ -140,7 +141,7 @@ public static bool gameOver = false; //gameover
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        
+        Debug.LogError("rubys current health "+ currentHealth);
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
 
 //GameOver
